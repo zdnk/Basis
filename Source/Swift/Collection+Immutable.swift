@@ -6,9 +6,7 @@
 //  Copyright © 2017 Zdenek Topic. All rights reserved.
 //
 
-import Foundation
-
-extension RangeReplaceableCollection {
+public extension RangeReplaceableCollection {
     /// Returns a new collection by appending a new element.
     public func appending(_ newElement: Self.Iterator.Element) -> Self {
         var copy = self

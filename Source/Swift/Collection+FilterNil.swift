@@ -6,8 +6,6 @@
 //  Copyright © 2017 Zdenek Topic. All rights reserved.
 //
 
-import Foundation
-
 public protocol _OptionalType {
     
     associatedtype _Wrapped
@@ -28,7 +26,7 @@ extension Optional: _OptionalType {
     
 }
 
-extension Collection where Iterator.Element: _OptionalType {
+public extension Collection where Iterator.Element: _OptionalType {
     
     public func filterNil() -> [Iterator.Element._Wrapped] {
         return self.flatMap { $0.flatMap { $0 } }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA3DCA26201A940900DC80A4 /* Optional+require.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3DCA25201A940900DC80A4 /* Optional+require.swift */; };
 		CA4F0B30200F52D500F58B1F /* Bool+toggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4F0B2F200F52D500F58B1F /* Bool+toggle.swift */; };
 		CABA03201FF557D90038D1DB /* WeakBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABA031F1FF557D90038D1DB /* WeakBox.swift */; };
 		CACA4FAB1FF28F21001DF00D /* Basis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CACA4FA11FF28F21001DF00D /* Basis.framework */; };
@@ -14,7 +15,6 @@
 		CACA4FB21FF28F21001DF00D /* Basis.h in Headers */ = {isa = PBXBuildFile; fileRef = CACA4FA41FF28F21001DF00D /* Basis.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CACA4FBE1FF28F77001DF00D /* Equatable+isAnyOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACA4FBD1FF28F77001DF00D /* Equatable+isAnyOf.swift */; };
 		CACA4FC01FF29091001DF00D /* result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACA4FBF1FF29091001DF00D /* result.swift */; };
-		CACA4FC21FF292CA001DF00D /* BasisLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACA4FC11FF292CA001DF00D /* BasisLogger.swift */; };
 		CACA4FC51FF2952B001DF00D /* Equatable+isAnyOfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACA4FC41FF2952B001DF00D /* Equatable+isAnyOfTests.swift */; };
 		CACA4FC71FF29868001DF00D /* With.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACA4FC61FF29868001DF00D /* With.swift */; };
 		CACA4FC91FF29AA6001DF00D /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACA4FC81FF29AA6001DF00D /* Then.swift */; };
@@ -37,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA3DCA25201A940900DC80A4 /* Optional+require.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+require.swift"; sourceTree = "<group>"; };
 		CA4F0B2F200F52D500F58B1F /* Bool+toggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+toggle.swift"; sourceTree = "<group>"; };
 		CABA031F1FF557D90038D1DB /* WeakBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakBox.swift; sourceTree = "<group>"; };
 		CACA4FA11FF28F21001DF00D /* Basis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Basis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,7 +48,6 @@
 		CACA4FB11FF28F21001DF00D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CACA4FBD1FF28F77001DF00D /* Equatable+isAnyOf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Equatable+isAnyOf.swift"; sourceTree = "<group>"; };
 		CACA4FBF1FF29091001DF00D /* result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = result.swift; sourceTree = "<group>"; };
-		CACA4FC11FF292CA001DF00D /* BasisLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasisLogger.swift; sourceTree = "<group>"; };
 		CACA4FC41FF2952B001DF00D /* Equatable+isAnyOfTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Equatable+isAnyOfTests.swift"; sourceTree = "<group>"; };
 		CACA4FC61FF29868001DF00D /* With.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = With.swift; sourceTree = "<group>"; };
 		CACA4FC81FF29AA6001DF00D /* Then.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
@@ -121,7 +121,6 @@
 			children = (
 				CACA4FCC1FF29C53001DF00D /* UIKit */,
 				CACA4FBC1FF28F4B001DF00D /* Swift */,
-				CACA4FC11FF292CA001DF00D /* BasisLogger.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -140,6 +139,7 @@
 				CACA4FD51FF2B155001DF00D /* Optional+IsNilOrEmpty.swift */,
 				CABA031F1FF557D90038D1DB /* WeakBox.swift */,
 				CA4F0B2F200F52D500F58B1F /* Bool+toggle.swift */,
+				CA3DCA25201A940900DC80A4 /* Optional+require.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -217,7 +217,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Zdenek Topic";
 				TargetAttributes = {
 					CACA4FA01FF28F21001DF00D = {
@@ -275,7 +275,7 @@
 				CACA4FCE1FF29C66001DF00D /* Cells+Reusable.swift in Sources */,
 				CACA4FD41FF2AF5E001DF00D /* Collection+FilterNil.swift in Sources */,
 				CACA4FCB1FF29BE2001DF00D /* Reusable.swift in Sources */,
-				CACA4FC21FF292CA001DF00D /* BasisLogger.swift in Sources */,
+				CA3DCA26201A940900DC80A4 /* Optional+require.swift in Sources */,
 				CACA4FC71FF29868001DF00D /* With.swift in Sources */,
 				CABA03201FF557D90038D1DB /* WeakBox.swift in Sources */,
 				CACA4FD21FF2AE9C001DF00D /* Dictionary+Immutable.swift in Sources */,
@@ -321,6 +321,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -328,6 +329,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -381,6 +383,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -388,6 +391,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -413,6 +417,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -424,6 +429,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -447,6 +453,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -469,6 +476,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5T26JJW2C6;
 				INFOPLIST_FILE = BasisTests/Info.plist;
@@ -484,6 +492,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5T26JJW2C6;
 				INFOPLIST_FILE = BasisTests/Info.plist;

@@ -6,19 +6,17 @@
 //  Copyright © 2017 Zdenek Topic. All rights reserved.
 //
 
-import Foundation
-
 public protocol WeakBoxType {
     
     associatedtype BoxedType: AnyObject
     
-    weak var unboxed: BoxedType? { get }
+    var unboxed: BoxedType? { get }
     func unbox(_ closure: (BoxedType) -> Void)
     func map<T>(default: T, _ closure: (BoxedType) -> T) -> T
     
 }
 
-extension WeakBoxType {
+public extension WeakBoxType {
     
     public var isNil: Bool {
         return unboxed == nil
@@ -56,7 +54,7 @@ public struct WeakBox<BoxedType: AnyObject>: WeakBoxType {
     
 }
 
-extension Collection where Iterator.Element: AnyObject {
+public extension Collection where Iterator.Element: AnyObject {
     
     public func weakified() -> [WeakBox<Iterator.Element>] {
         return self.map { return WeakBox($0) }
@@ -64,7 +62,7 @@ extension Collection where Iterator.Element: AnyObject {
     
 }
 
-extension Collection where Iterator.Element: _OptionalType, Iterator.Element._Wrapped: AnyObject {
+public extension Collection where Iterator.Element: _OptionalType, Iterator.Element._Wrapped: AnyObject {
     
     public func weakified() -> [WeakBox<Iterator.Element._Wrapped>] {
         return self.map { return WeakBox($0.value) }
@@ -72,7 +70,7 @@ extension Collection where Iterator.Element: _OptionalType, Iterator.Element._Wr
     
 }
 
-extension Collection where Iterator.Element: WeakBoxType {
+public extension Collection where Iterator.Element: WeakBoxType {
     
     public func mapIfNotNil<T>(_ closure: (Iterator.Element.BoxedType) -> T) -> [T] {
         var mapped = [T]()

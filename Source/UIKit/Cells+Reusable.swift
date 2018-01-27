@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension Reusable where Self: UITableViewCell {
+public extension Reusable where Self: UITableViewCell {
     
     public var reuseIdentifier: String {
         return String(describing: self)
@@ -17,7 +17,7 @@ extension Reusable where Self: UITableViewCell {
     
 }
 
-extension Reusable where Self: UICollectionViewCell {
+public extension Reusable where Self: UICollectionViewCell {
     
     public var reuseIdentifier: String {
         return String(describing: self)

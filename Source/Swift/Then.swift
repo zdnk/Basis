@@ -10,7 +10,7 @@ import Foundation
 
 public protocol Then {}
 
-extension Then where Self: AnyObject {
+public extension Then where Self: AnyObject {
     
     /// Makes it available to set properties with closures just after initializing.
     ///

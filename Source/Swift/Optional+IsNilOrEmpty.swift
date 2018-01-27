@@ -6,10 +6,8 @@
 //  Copyright © 2017 Zdenek Topic. All rights reserved.
 //
 
-import Foundation
-
-extension Optional where Wrapped == String {
-    var isNilOrEmpty: Bool {
+public extension Optional where Wrapped == String {
+    public var isNilOrEmpty: Bool {
         switch self {
         case let string?:
             return string.isEmpty
@@ -19,8 +17,8 @@ extension Optional where Wrapped == String {
     }
 }
 
-extension Optional where Wrapped: Collection {
-    var isNilOrEmpty: Bool {
+public extension Optional where Wrapped: Collection {
+    public var isNilOrEmpty: Bool {
         switch self {
         case let collection?:
             return collection.isEmpty

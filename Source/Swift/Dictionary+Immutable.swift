@@ -6,9 +6,7 @@
 //  Copyright © 2017 Zdenek Topic. All rights reserved.
 //
 
-import Foundation
-
-extension Dictionary {
+public extension Dictionary {
     /// Initialize dictionary with a collection of key-value tuples.
     public init<C>(elements: C) where C: Collection, C.Iterator.Element == (Key, Value) {
         self.init()

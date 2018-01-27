@@ -6,8 +6,6 @@
 //  Copyright © 2017 Zdenek Topic. All rights reserved.
 //
 
-import Foundation
-
 public protocol Reusable {
     
     var reuseIdentifier: String { get }

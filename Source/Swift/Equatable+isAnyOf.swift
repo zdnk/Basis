@@ -6,9 +6,7 @@
 //  Copyright © 2017 Zdenek Topic. All rights reserved.
 //
 
-import Foundation
-
-extension Equatable {
+public extension Equatable {
     
     public func isAny(of elements: [Self]) -> Bool {
         return elements.contains(self)

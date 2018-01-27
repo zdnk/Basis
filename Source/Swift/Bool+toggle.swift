@@ -6,14 +6,14 @@
 //  Copyright © 2018 Zdenek Topic. All rights reserved.
 //
 
-import Foundation
-
 public extension Bool {
     
-    @discardableResult
-    public mutating func toggle() -> Bool {
+    public mutating func toggle() {
         self = !self
-        return self
+    }
+    
+    public func toggled() -> Bool {
+        return !self
     }
     
 }
