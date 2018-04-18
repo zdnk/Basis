@@ -26,10 +26,10 @@ extension Optional: _OptionalType {
     
 }
 
-public extension Collection where Iterator.Element: _OptionalType {
+public extension Collection where Self.Element: _OptionalType {
     
-    public func filterNil() -> [Iterator.Element._Wrapped] {
-        return self.flatMap { $0.flatMap { $0 } }
+    public func filterNil() -> [Self.Element._Wrapped] {
+        return self.compactMap { $0.flatMap { $0 } }
     }
     
 }

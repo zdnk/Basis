@@ -54,25 +54,25 @@ public struct WeakBox<BoxedType: AnyObject>: WeakBoxType {
     
 }
 
-public extension Collection where Iterator.Element: AnyObject {
+public extension Collection where Self.Element: AnyObject {
     
-    public func weakified() -> [WeakBox<Iterator.Element>] {
+    public func weakified() -> [WeakBox<Self.Element>] {
         return self.map { return WeakBox($0) }
     }
     
 }
 
-public extension Collection where Iterator.Element: _OptionalType, Iterator.Element._Wrapped: AnyObject {
+public extension Collection where Self.Element: _OptionalType, Self.Element._Wrapped: AnyObject {
     
-    public func weakified() -> [WeakBox<Iterator.Element._Wrapped>] {
+    public func weakified() -> [WeakBox<Self.Element._Wrapped>] {
         return self.map { return WeakBox($0.value) }
     }
     
 }
 
-public extension Collection where Iterator.Element: WeakBoxType {
+public extension Collection where Self.Element: WeakBoxType {
     
-    public func mapIfNotNil<T>(_ closure: (Iterator.Element.BoxedType) -> T) -> [T] {
+    public func mapIfNotNil<T>(_ closure: (Self.Element.BoxedType) -> T) -> [T] {
         var mapped = [T]()
         for box in self {
             guard let unboxed = box.unboxed else {
@@ -86,12 +86,12 @@ public extension Collection where Iterator.Element: WeakBoxType {
         return mapped
     }
     
-    public func filterNil() -> [Iterator.Element] {
+    public func filterNil() -> [Self.Element] {
         return self.filter { $0.isNotNil }
     }
     
-    public func filteredAndStrongified() -> [Iterator.Element.BoxedType] {
-        var strong: [Iterator.Element.BoxedType] = []
+    public func filteredAndStrongified() -> [Self.Element.BoxedType] {
+        var strong: [Self.Element.BoxedType] = []
         
         for box in self {
             guard let unboxed = box.unboxed else {
@@ -104,7 +104,7 @@ public extension Collection where Iterator.Element: WeakBoxType {
         return strong
     }
     
-    public func strongified() -> [Iterator.Element.BoxedType?] {
+    public func strongified() -> [Self.Element.BoxedType?] {
         return self.map { return $0.unboxed }
     }
     

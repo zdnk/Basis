@@ -8,7 +8,7 @@
 
 public extension RangeReplaceableCollection {
     /// Returns a new collection by appending a new element.
-    public func appending(_ newElement: Self.Iterator.Element) -> Self {
+    public func appending(_ newElement: Self.Element) -> Self {
         var copy = self
         copy.append(newElement)
         return copy
